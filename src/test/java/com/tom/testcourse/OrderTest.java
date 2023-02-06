@@ -1,5 +1,7 @@
 package com.tom.testcourse;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,6 +15,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OrderTest {
 
+    private Order order;
+
+    @BeforeEach
+    void initializeOrder(){
+        System.out.println("Inside @BeforeEach method");
+        order = new Order();
+    }
+
+    @AfterEach
+    void cleanUp(){
+        System.out.println("Inside @AfterEach method");
+        order.cancel();
+    }
     @Test
     void testAssertArrayEquals(){
         //given
@@ -26,8 +41,8 @@ class OrderTest {
 
     @Test
     void mealListShouldBeEmptyAfterCreationOfOrder(){
-        //given
-        Order order = new Order();
+//        //given
+//        Order order = new Order();
 
         //then
         assertThat(order.getMeals(), empty());
@@ -41,7 +56,7 @@ class OrderTest {
         //given
         Meal meal = new Meal(20, "Burger Xl");
         Meal meal2 = new Meal(10, "Zapiekana");
-        Order order = new Order();
+//        Order order = new Order();
 
         //when
         order.addMealToOrder(meal);
@@ -59,7 +74,7 @@ class OrderTest {
     void removingMealFromOrderShouldDecreaseOrderSize(){
         //given
         Meal meal = new Meal(20, "Burger Xl");
-        Order order = new Order();
+//        Order order = new Order();
 
         //when
         order.addMealToOrder(meal);
@@ -75,7 +90,7 @@ class OrderTest {
         //given
         Meal meal1 = new Meal(20, "Burger Xl");
         Meal meal2 = new Meal(10, "Zapiekana");
-        Order order = new Order();
+//        Order order = new Order();
 
         //when
         order.addMealToOrder(meal1);
@@ -100,15 +115,5 @@ class OrderTest {
         assertThat(mealsList1, is(mealsList2));
     }
 
-    @Test
-    void addMealToOrder() {
-    }
 
-    @Test
-    void removeMealFromOrder() {
-    }
-
-    @Test
-    void getMeals() {
-    }
 }
