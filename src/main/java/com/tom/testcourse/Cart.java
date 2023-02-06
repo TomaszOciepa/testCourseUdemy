@@ -9,6 +9,10 @@ public class Cart {
 
     private List<Order> orders = new ArrayList<>();
 
+    public List<Order> getOrders() {
+        return orders;
+    }
+
     void addOrderToCart(Order order){
         this.orders.add(order);
     }
