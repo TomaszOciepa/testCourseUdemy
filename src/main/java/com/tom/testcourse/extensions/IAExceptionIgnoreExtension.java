@@ -1,4 +1,4 @@
-package com.tom.testcourse;
+package com.tom.testcourse.extensions;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestExecutionExceptionHandler;

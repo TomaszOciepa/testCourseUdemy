@@ -1,4 +1,4 @@
-package com.tom.testcourse;
+package com.tom.testcourse.account;
 
 public class Account {
     private boolean active;

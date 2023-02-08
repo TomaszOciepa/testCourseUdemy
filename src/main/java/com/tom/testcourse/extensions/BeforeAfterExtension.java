@@ -1,4 +1,4 @@
-package com.tom.testcourse;
+package com.tom.testcourse.extensions;
 
 import org.junit.jupiter.api.extension.AfterEachCallback;
 import org.junit.jupiter.api.extension.BeforeEachCallback;

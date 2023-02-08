@@ -1,4 +1,4 @@
-package com.tom.testcourse;
+package com.tom.testcourse.account;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;

@@ -1,4 +1,6 @@
-package com.tom.testcourse;
+package com.tom.testcourse.order;
+
+import com.tom.testcourse.Meal;
 
 import java.util.ArrayList;
 import java.util.List;

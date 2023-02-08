@@ -1,4 +1,6 @@
-package com.tom.testcourse;
+package com.tom.testcourse.order;
+
+import com.tom.testcourse.order.Order;
 
 import java.io.*;
 

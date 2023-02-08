@@ -1,11 +1,12 @@
-package com.tom.testcourse;
+package com.tom.testcourse.account;
 
+import com.tom.testcourse.account.Account;
+import com.tom.testcourse.account.Address;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumingThat;
 

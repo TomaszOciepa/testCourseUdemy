@@ -1,6 +1,10 @@
 package com.tom.testcourse;
 
+import com.tom.testcourse.extensions.IAExceptionIgnoreExtension;
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestFactory;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -8,8 +12,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -17,6 +21,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.DynamicTest.dynamicTest;
+
 
 class MealTest {
 
@@ -100,6 +106,7 @@ class MealTest {
         assertThat(price, lessThan(20));
     }
 
+    @Tag("burger")
     @ParameterizedTest
     @MethodSource("createMealsWithNameAndPrice")
     void burgersShouldHaveCorrectNameAndPrice(String name, int price){
@@ -125,4 +132,13 @@ class MealTest {
         List<String> cakeNames = Arrays.asList("cheeasecake", "Fruitcake", "Cupcake");
         return cakeNames.stream();
     }
+
+    @TestFactory
+    Collection<DynamicTest> dynamicTestCollections(){
+        return  Arrays.asList(
+                dynamicTest("Dynamic test 1", ()-> assertThat(5, lessThan(6))),
+                dynamicTest("Dynamic test 2", ()-> assertEquals(4, 2*2))
+        );
+    }
+
 }

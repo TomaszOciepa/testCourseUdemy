@@ -1,5 +1,8 @@
-package com.tom.testcourse;
+package com.tom.testcourse.order;
 
+import com.tom.testcourse.Meal;
+import com.tom.testcourse.order.Order;
+import com.tom.testcourse.order.OrderBackup;
 import org.junit.jupiter.api.*;
 
 import java.io.FileNotFoundException;
@@ -29,7 +32,7 @@ public class OrderBackUpTest {
     void backupOrderWithOneMeal() throws IOException {
         //given
         Meal meal = new Meal(7,"Burger");
-        Order order = new Order();
+        com.tom.testcourse.order.Order order = new Order();
         order.addMealToOrder(meal);
 
         //when

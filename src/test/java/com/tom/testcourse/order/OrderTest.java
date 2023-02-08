@@ -1,11 +1,15 @@
-package com.tom.testcourse;
+package com.tom.testcourse.order;
 
+import com.tom.testcourse.Meal;
+import com.tom.testcourse.extensions.BeforeAfterExtension;
+import com.tom.testcourse.order.Order;
+import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -49,7 +53,7 @@ class OrderTest {
         assertThat(order.getMeals(), empty());
         assertThat(order.getMeals().size(), equalTo(0));
         assertThat(order.getMeals(), hasSize(0));
-        assertThat(order.getMeals(), emptyCollectionOf(Meal.class));
+        MatcherAssert.assertThat(order.getMeals(), emptyCollectionOf(Meal.class));
     }
 
     @Test
@@ -70,7 +74,7 @@ class OrderTest {
         assertThat(order.getMeals().get(0).getPrice(), equalTo(20));
 
     }
-
+    @Tag("burger")
     @Test
     void removingMealFromOrderShouldDecreaseOrderSize(){
         //given
