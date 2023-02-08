@@ -35,7 +35,6 @@ public class AccountServiceTest {
         //given
         AccountRepository accountRepository = mock(AccountRepository.class);
         AccountService accountService = new AccountService(accountRepository);
-//        when(accountRepository.getAllAccounts()).thenReturn(accounts);
         given(accountRepository.getAllAccounts()).willReturn(Arrays.asList());
 
         //when
