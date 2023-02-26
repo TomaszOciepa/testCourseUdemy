@@ -1,8 +1,6 @@
 package com.tom.testcourse.order;
 
 import com.tom.testcourse.Meal;
-import com.tom.testcourse.order.Order;
-import com.tom.testcourse.order.OrderBackup;
 import org.junit.jupiter.api.*;
 
 import java.io.FileNotFoundException;
