@@ -1,7 +1,6 @@
 package com.tom.testcourse.cart;
 
-import com.tom.testcourse.Meal;
-import com.tom.testcourse.cart.Cart;
+import com.tom.testcourse.meal.Meal;
 import com.tom.testcourse.order.Order;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

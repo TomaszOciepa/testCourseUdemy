@@ -1,6 +1,6 @@
 package com.tom.testcourse.order;
 
-import com.tom.testcourse.Meal;
+import com.tom.testcourse.meal.Meal;
 import org.junit.jupiter.api.*;
 
 import java.io.FileNotFoundException;

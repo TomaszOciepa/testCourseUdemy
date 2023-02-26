@@ -1,8 +1,7 @@
 package com.tom.testcourse.order;
 
-import com.tom.testcourse.Meal;
+import com.tom.testcourse.meal.Meal;
 import com.tom.testcourse.extensions.BeforeAfterExtension;
-import com.tom.testcourse.order.Order;
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

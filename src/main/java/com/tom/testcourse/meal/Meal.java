@@ -1,8 +1,12 @@
-package com.tom.testcourse;
+package com.tom.testcourse.meal;
 
 import java.util.Objects;
 
 public class Meal {
+
+    public String getName() {
+        return name;
+    }
 
     private int price;
     private String name;

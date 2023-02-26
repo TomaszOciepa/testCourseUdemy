@@ -1,6 +1,7 @@
-package com.tom.testcourse;
+package com.tom.testcourse.meal;
 
 import com.tom.testcourse.extensions.IAExceptionIgnoreExtension;
+import com.tom.testcourse.meal.Meal;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
